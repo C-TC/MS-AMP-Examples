@@ -5,17 +5,17 @@
 
 set -e
 
-mkdir -p data
+# mkdir -p data
 cd data
 
-echo "start to download Wikipedia dump"
-wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2
+# echo "start to download Wikipedia dump"
+# wget https://dumps.wikimedia.org/enwiki/latest/enwiki-latest-pages-articles.xml.bz2
 
-echo "download completed, start to extract json files"
-python -m wikiextractor.WikiExtractor --json enwiki-latest-pages-articles.xml.bz2
-rm -rf enwiki-latest-pages-articles.xml.bz2
+# echo "download completed, start to extract json files"
+# python -m wikiextractor.WikiExtractor --json enwiki-latest-pages-articles.xml.bz2
+# rm -rf enwiki-latest-pages-articles.xml.bz2
 
-echo "extract completed, start to merge json files"
+# echo "extract completed, start to merge json files"
 ouput_json="wiki_all.json"
 
 find text/ -type f  -print0 |
